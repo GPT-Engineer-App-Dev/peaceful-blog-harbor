@@ -24,6 +24,14 @@ const Layout = () => {
       <main className="flex-grow overflow-auto">
         <Outlet />
       </main>
+      <footer className="border-t p-4 text-center">
+        <div className="flex justify-center space-x-4 mb-4">
+          <a href="#" className="text-muted-foreground hover:text-foreground">Facebook</a>
+          <a href="#" className="text-muted-foreground hover:text-foreground">Twitter</a>
+          <a href="#" className="text-muted-foreground hover:text-foreground">Instagram</a>
+        </div>
+        <p className="text-muted-foreground">&copy; 2023 My Blog. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
@@ -34,8 +42,7 @@ const DesktopNav = () => (
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
-      <Package2 className="h-6 w-6" />
-      <span className="sr-only">Acme Inc</span>
+      <span>My Blog</span>
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
@@ -59,8 +66,7 @@ const MobileNav = () => (
           to="/"
           className="flex items-center gap-2 text-lg font-semibold"
         >
-          <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <span>My Blog</span>
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
